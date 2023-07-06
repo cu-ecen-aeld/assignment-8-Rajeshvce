@@ -1,2 +1,7 @@
+<<<<<<< HEAD
+name: base_external
+description: AELD Assignments
+=======
 name: project_base
 description: Base customization for project
+>>>>>>> 963957bc507d01a753d1ed251a12227d62f69c97
