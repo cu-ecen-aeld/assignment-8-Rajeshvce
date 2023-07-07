@@ -1,6 +1,2 @@
-<<<<<<< HEAD
 source "$BR2_EXTERNAL_base_external_PATH/package/aesd-assignments/Config.in"
 source "$BR2_EXTERNAL_base_external_PATH/package/ldd/Config.in"
-=======
-source "$BR2_EXTERNAL_project_base_PATH/package/aesd-assignments/Config.in"
->>>>>>> 963957bc507d01a753d1ed251a12227d62f69c97
