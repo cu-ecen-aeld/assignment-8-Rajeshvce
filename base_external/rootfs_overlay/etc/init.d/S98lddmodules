@@ -1,26 +1,25 @@
-#! /bin/sh
+#!/bin/sh
 set -e
-#load skull
-#load faulty driver
-#load hello module with modprobe and rmmod on shutdown
 
 NAME=lddmodules
-case "$1" in
-    start)
-        echo "loading modules"
-        modprobe hello
-        module_load faulty
-        scull_load
-        ;;
-    stop)
-        echo "Unloading modules"
-        rmmod hello
+case "$1" in 
+	start)
+		echo "Loading drivers and modules"
+		aesdchar_load
+		modprobe hello
+		module_load faulty
+		scull_load
+		;;
+	stop)
+		echo "Unloading drivers and modules"
+		aesdchar_unload
+		rmmod hello
         module_unload faulty
         scull_unload
-        ;;
-    *)
-        echo "Usage: $0 {start|stop}"
-    exit 1
+		;;
+	*)
+		echo "usage: $0 {start|stop}"
+	exit 1
 esac
+
 exit 0
-        
